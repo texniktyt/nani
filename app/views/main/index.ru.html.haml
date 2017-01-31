@@ -1,0 +1,17 @@
+- content_for(:title,  "Index")
+
+
+.center.jumbotron
+  %h1
+    Добро пожаловать!
+    %br
+    %br
+    %h2
+      Чтобы продолжить - нажми:
+  - if signed_in?
+    = link_to "Приложение", work_path, class: "btn app-button"
+  - else
+    = link_to "Регистрация", signup_path, class: "btn app-button"
+
+
+
